@@ -30,13 +30,13 @@ int main(int argc, char *argv[]) {
     if (file_pointer_recipient == NULL)
         fileFatalErrorMessage(recipient, "Esse caminho não existe");
 
-    unsigned int bytes_readed = 0;
-    unsigned int bytes_writed = 0;
+    unsigned int bytes_read = 0;
+    unsigned int bytes_written = 0;
 
     do {
-        bytes_readed = fread(buffer, 1, buffer_size, file_pointer_sender);
-        bytes_writed = fwrite(buffer, 1, bytes_readed, file_pointer_recipient);
-    } while (bytes_readed > 0);
+        bytes_read = fread(buffer, 1, buffer_size, file_pointer_sender);
+        bytes_written = fwrite(buffer, 1, bytes_read, file_pointer_recipient);
+    } while (bytes_read > 0);
 
     fclose(file_pointer_sender);
     fclose(file_pointer_recipient);
