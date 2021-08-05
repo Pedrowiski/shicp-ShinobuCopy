@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
 
     const unsigned char *sender = argv[1];
     const unsigned char *recipient = argv[2];
-    char buffer[buffer_size] = {0};
+    signed char buffer[buffer_size] = {0};
 
     FILE *file_pointer_sender = fopen(sender, "rb");
     FILE *file_pointer_recipient = fopen(recipient, "wb");
