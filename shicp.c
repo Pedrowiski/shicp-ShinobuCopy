@@ -32,5 +32,8 @@ int main(int argc, char *argv[]) {
     while ((file_reader = fgetc(file_pointer_sender)) != EOF)
         fputc(file_reader, file_pointer_recipient);
 
+    fclose(file_pointer_sender);
+    fclose(file_pointer_recipient);
+
     return 0;
 }
