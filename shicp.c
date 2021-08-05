@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define buffer_size 5
+#define buffer_size 1024
 
 void genericFatalErrorMessage(const char *message) {
     printf("shicp: %s\n", message);
